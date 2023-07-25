@@ -22,7 +22,7 @@ export const Card = ({ image, title, subtitle, about }: Props) => {
     <Container>
       <Contents>
         <CardeImage>
-          <Image src={image} alt="" />
+          <Image src={image} alt="" width={64} height={64}/>
         </CardeImage>
         <Description>
           <h3>{title}</h3>

@@ -57,25 +57,11 @@ export const HeaderAction = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
-  .signIn{
-    button{
-      color: ${colors.textbase};
-      background: none;
-    }
-  }
   
-
-  button{
-    border: none;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    padding: 8px 16px;
-    border-radius: 32px;
-    color: ${colors.white};
-    background:${colors.primary500};
-  }
+  img{
+    border-radius: 50%;
+    object-fit: cover;
+  }  
 `
 export const ModalContainer = styled.div`
   width: 100%;

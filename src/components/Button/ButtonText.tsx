@@ -5,6 +5,10 @@ interface ButtonTextProps{
 }
 
 export default function ButtonText({text}: ButtonTextProps){
+  // const textStyle = {
+  //   color: '#FFF', 
+  // };
+
   return (
     <p>{text}</p>
   )

@@ -5,13 +5,27 @@ import { IoAddOutline } from 'react-icons/io5'
 
 import { Button } from '../../components/Button'
 import Image1 from '../../assets/images/image1.svg'
+import Group from '../../assets/images/group.svg'
 
-import { DataTableContainer, ActionView } from './style'
+import { 
+  DataTableContainer, 
+  DataTableHeader,
+  HeaderLeft 
+} from './style'
 
 export default function DataTable() {
   return (
     <DataTableContainer>
-      <h3>Top Cryptos</h3>
+      <DataTableHeader>
+        <HeaderLeft>
+          <Image src={Group} alt='' width={32} height={32}/>
+          <h4>My Wallet</h4>
+        </HeaderLeft>
+        <Button.Root>
+          <IoAddOutline size={12}/>
+          <Button.Text text='Add crypto'/>
+        </Button.Root>
+      </DataTableHeader>
       <table>
         <tbody>
           <tr>
@@ -51,12 +65,6 @@ export default function DataTable() {
           </tr>
         </tbody>
       </table>
-      <ActionView>
-        <Button.Root>
-          <Button.Text text='View more'/>
-          <IoAddOutline size={12}/>
-        </Button.Root>
-      </ActionView>
     </DataTableContainer>
   )
 }

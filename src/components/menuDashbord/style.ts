@@ -4,7 +4,8 @@ import { lg } from '../../styles/responsiveStyles';
 
 import styled from 'styled-components'
 
-export const MenuContainer = styled.div``
+export const MenuContainer = styled.div`
+`
 export const MenuContents = styled.div`
   display: flex;
   flex-direction: column;

@@ -11,7 +11,6 @@ import { Form, Input } from "@rocketseat/unform";
 
 import { NewModal } from '../../components/Modal'
 import Logo from '../../assets/images/logo.svg'
-import { colors } from '../../styles/color'
 import { Button } from '../Button'
 
 import { 
@@ -50,73 +49,68 @@ export default function Header() {
   return (
     <>
     <NewModal 
-        isOpen={isOpenModal}
-        onClose={toggleModal}
-      >
-        <ModalContainer>
-          <h4>Sign in to <span>Coin</span>Synch</h4>
-          <Form onSubmit={handleSubmit}>
-            <FormContent>
-              <label>
-                <BsPerson size={24}/>
-              </label>
-              <Input 
-                type="name"
-                name="name"
-                id="name"
-                placeholder="Name"
-              />
-            </FormContent>
-            <FormContent>
-              <label>
-                <MdEmail size={24}/>
-              </label>
-              <Input 
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-              />
-            </FormContent>
-            <FormContent>
-              <label>
-                <RiLockPasswordLine size={24}/>
-              </label>
-              <Input 
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-              />
-            </FormContent>
-            <FormContent>
-              <label>
-                <RiLockPasswordLine size={24}/>
-              </label>
-              <Input 
-                type="text"
-                name="confirmPassword"
-                id="confirmPassword"
-                placeholder="Confirm Password"
-              />
-            </FormContent>
-          </Form>
-          <Privacy>
-            <input type="checkbox" name='privacy' id='privacy' />
-            <label>I have read and accept the <span>Privacy Policy</span> and <span>Terms of User Sign up.</span></label>
-          </Privacy>
-          <ModalAction>
-            <Button.Root 
-              border='none' 
-              background={colors.primary500} 
-              color={colors.white} 
-              hoverEffect={true}
-            >
-              <Button.Text text='Sign up'/>
-            </Button.Root>
-            <label>Already have and account? <Link href=''>Sign in to</Link> <span>Coin</span>Synch</label>
-          </ModalAction>
-        </ModalContainer>
+      isOpen={isOpenModal}
+      onClose={toggleModal}
+    >
+      <ModalContainer>
+        <h4>Sign in to <span>Coin</span>Synch</h4>
+        <Form onSubmit={handleSubmit}>
+          <FormContent>
+            <label>
+              <BsPerson size={24}/>
+            </label>
+            <Input 
+              type="name"
+              name="name"
+              id="name"
+              placeholder="Name"
+            />
+          </FormContent>
+          <FormContent>
+            <label>
+              <MdEmail size={24}/>
+            </label>
+            <Input 
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+          </FormContent>
+          <FormContent>
+            <label>
+              <RiLockPasswordLine size={24}/>
+            </label>
+            <Input 
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+          </FormContent>
+          <FormContent>
+            <label>
+              <RiLockPasswordLine size={24}/>
+            </label>
+            <Input 
+              type="text"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+            />
+          </FormContent>
+        </Form>
+        <Privacy>
+          <input type="checkbox" name='privacy' id='privacy' />
+          <label>I have read and accept the <span>Privacy Policy</span> and <span>Terms of User Sign up.</span></label>
+        </Privacy>
+        <ModalAction>
+          <Button.Root>
+            <Button.Text text='Sign up'/>
+          </Button.Root>
+          <label>Already have and account? <Link href=''>Sign in to</Link> <span>Coin</span>Synch</label>
+        </ModalAction>
+      </ModalContainer>
     </NewModal>
       <Container>
         <Contents>
@@ -142,14 +136,12 @@ export default function Header() {
               <span>213</span>
             </CoinCarrousel>
             <HeaderAction>
-              <Button.Root hoverEffect={false}>
-                <Button.Text text='Sign in'/>
-              </Button.Root>
+              <div className="signIn">
+                <Button.Root>
+                  <Button.Text text='Sign in'/>
+                </Button.Root>
+              </div>
               <Button.Root 
-                border='none' 
-                background={colors.primary500} 
-                color={colors.white} 
-                hoverEffect={true}
                 onClick={toggleModal}
               >
                 <Button.Text text='Sign up'/>

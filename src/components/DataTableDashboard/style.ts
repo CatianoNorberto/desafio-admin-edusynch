@@ -4,10 +4,13 @@ import { colors } from '../../styles/color'
 
 export const DataTableContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 449px;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
+  padding: 8px;
   background: ${colors.white};
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
 
   h3{
     text-align: center;
@@ -27,7 +30,6 @@ export const DataTableContainer = styled.div`
     width: 100%;
     border-spacing: 0;
 
-    
     tr {
       display: flex;
       text-align: left;
@@ -79,23 +81,38 @@ export const DataTableContainer = styled.div`
     }
   }
 `
-export const ActionView = styled.div`
+export const DataTableHeader = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
+  
   button{
+    gap: 8px;
+    width: 120px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
-    gap: 8px;
     border: none;
-    color: ${colors.primary500};
-    background: none;
+    border-radius: 32px;
+    color: ${colors.white};
+    background:${colors.primary500};
 
     p{
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 24px;
     }
+  }
+`
+export const HeaderLeft = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: ${colors.textbase};
   }
 `
