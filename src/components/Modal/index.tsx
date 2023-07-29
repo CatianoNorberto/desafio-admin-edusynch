@@ -22,7 +22,7 @@ export const NewModal = ({isOpen, onClose, children}: Props) =>(
       onClick={onClose}
       className="react-modal-close"
     >
-      <Image src={closeImg} alt="Fechar modal" />
+      <Image src={closeImg} alt="Fechar modal" width={16} height={16}/>
     </button>
 
     {children}

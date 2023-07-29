@@ -5,14 +5,24 @@ import { lg } from '../../styles/responsiveStyles';
 import styled from 'styled-components'
 
 export const MenuContainer = styled.div`
+  width: 80px;
+  height: 100%;
+  padding: 20px 16px;
+  background: linear-gradient(0deg, #E0DEEA, #E0DEEA),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
 `
-export const MenuContents = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
 
-  .title {
+export const MenuContents = styled.div`
+  width: 100%;
+  height: 100%;
+  /* gap: 10px; */
+  display: flex;
+  /* margin-bottom: 20px; */
+  flex-direction: column;
+  
+  
+
+  span{
     font-size: 12px;
     font-weight: 200;
     color: '';

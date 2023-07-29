@@ -1,14 +1,17 @@
 'use client'
 
+import { type } from "os";
 import { ReactNode } from "react"
 
-import styled, { css } from "styled-components"
-
-import { colors } from '../../styles/color'
+import styled from "styled-components"
 
 interface ButtonRootProps{
   children: ReactNode;
   onClick?: (event: MouseEvent) => void;
+  type?: string;
+  value?: string;
+  id?: string;
+  item?: string;
 }
 
 const ButtonContainer = styled.button<ButtonRootProps>`
@@ -19,12 +22,20 @@ const ButtonContainer = styled.button<ButtonRootProps>`
 
 export default function ButtonRoot({ 
   children, 
-  onClick
+  onClick,
+  type,
+  value,
+  id,
+  item
 }: ButtonRootProps) {
   
   return (
     <ButtonContainer 
       onClick={onClick}
+      type={type}
+      value={value}
+      id={id}
+      item={item}
     >
       {children}
     </ButtonContainer>

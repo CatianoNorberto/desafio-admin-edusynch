@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { Form, Input } from "@rocketseat/unform";
 
 import Logo from '../assets/images/logo.svg'
+import Arrowright from '../assets/images/right.svg'
 import Propriety1 from '../assets/images/Property1.svg'
 import BackgroundImg from '../assets/images/backgroundImg.svg'
 
@@ -27,8 +28,9 @@ import {
   FormContent,
   Privacy,
   ModalAction, 
-  BannerContents,
+  BannerContainer,
   Contents,
+  ContentsLeft,
   ContentGroup,
   Group,
   BannerCarrousel,
@@ -127,36 +129,39 @@ export default function Home() {
       </NewModal>
       <HomeContainer>
         <Header/>
-        <BannerContents>
+        <BannerContainer>
           <Contents>
-            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-            <h4>Lorem ipsum dolor sit amet, consectetur 
-              adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-              lectus magna fringilla urna, porttitor
-            </h4>
-            <Button.Root
-              onClick={toggleModal}
-            >
-              <Button.Text text='Sign up now now'/>
-            </Button.Root>
-            <ContentGroup>
-              <Group>
-                <h5>Cryptos</h5>
-              </Group>
-              <Group>
-                <h5>NFTs</h5>
-              </Group>
-              <Group>
-                <h5>Games</h5>
-              </Group>
-            </ContentGroup>
+            <ContentsLeft>
+              <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+              <h4>Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
+                lectus magna fringilla urna, porttitor
+              </h4>
+              <Button.Root
+                onClick={toggleModal}
+              >
+                <Button.Text text='Sign up now now'/>
+                <Image src={Arrowright} alt='arrow image' width={12} height={12}/>
+              </Button.Root>
+              <ContentGroup>
+                <Group>
+                  <h5>Cryptos</h5>
+                </Group>
+                <Group>
+                  <h5>NFTs</h5>
+                </Group>
+                <Group>
+                  <h5>Games</h5>
+                </Group>
+              </ContentGroup>
+            </ContentsLeft>
+            <BannerCarrousel>
+              <Image src={Propriety1} alt='' width={384} height={499}/>
+            </BannerCarrousel>
           </Contents>
-          <BannerCarrousel>
-            <Image src={Propriety1} alt='' width={384} height={499}/>
-          </BannerCarrousel>
-        </BannerContents>
+        </BannerContainer>
         <BannerBackground>
-          <Image src={BackgroundImg} alt='' />
+          <Image src={BackgroundImg} alt='' width={1440} height={247}/>
         </BannerBackground>
         <Announcement>
           <AnnouncementContents>
@@ -205,10 +210,10 @@ export default function Home() {
             <NewsletterLeft>
               <h4>Lorem ipsum</h4>
               <h2>Lorem ipsum</h2>
-              <span>
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
                 purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-              </span>
+              </p>
             </NewsletterLeft>
             <NewsletterForm>
               <Form onSubmit={handleSubmit}>

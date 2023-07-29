@@ -6,7 +6,8 @@ import Logo from '../../assets/images/logo.svg'
 import {
   FooterContainter,
   FooterContents,
-  FooterCopyRight
+  FooterCopyRight,
+  FooterCopyLeft
 } from './style'
 
 export default function Footer() {
@@ -18,7 +19,9 @@ export default function Footer() {
             Copyright &copy; 2022 -  All rights reserved
           </p>
         </FooterCopyRight>
-        <Image src={Logo} alt='' width={94} height={16}/>
+        <FooterCopyLeft>
+          <Image src={Logo} alt='' width={94} height={17}/>
+        </FooterCopyLeft>
       </FooterContents>
     </FooterContainter>
   )

@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 import { colors } from '../../styles/color'
-import { sm, md, lg, xl } from '../../styles/responsiveStyles';
+import { xs, sm, md, lg, xl } from '../../styles/responsiveStyles';
+
+interface PerfilDataProps {
+  isVisible: boolean;
+}
 
 export const Container = styled.div`
   width: 100%;
@@ -14,30 +18,30 @@ export const Container = styled.div`
 `
 export const Contents = styled.div`
   width: 100%;
-  max-width: 76rem;
-  margin: auto;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   
-  padding: 12px 0;
+  padding: 12px 32px;
 
   
-  /* ${lg`
-    width: 100%;
-    max-width: 64rem;
-    margin: auto;
+  ${xl`
+    max-width: 1216px;
+  `}
+  ${lg`
+    max-width: 1024px;
   `}
   ${md`
-    width: 100%;
-    max-width: 17rem;
-    margin: auto;
+    max-width: 768px;
   `}
   ${sm`
-    width: 100%;
-    max-width: 42rem;
-    margin: auto;
-  `} */
+    max-width: 480px;
+  `}
+  ${xs`
+    max-width: 320px;
+  `}
 `
 export const HeaderLeft = styled.div`
   display: flex;
@@ -49,11 +53,13 @@ export const HeaderRight = styled.div`
   align-items: center;
   gap: 20px;
 `
-export const CoinCarrousel = styled.div`
-  width: 365px;
-  height: 100%;
+export const Perfil = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
 `
-export const HeaderAction = styled.div`
+export const Userperfil = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -62,6 +68,43 @@ export const HeaderAction = styled.div`
     border-radius: 50%;
     object-fit: cover;
   }  
+`
+export const PerfilData = styled.ul<PerfilDataProps>`
+  width: 124px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  top: 35px;
+
+  position: absolute;
+  z-index: 300;
+  border-radius: 4px;
+  background: ${colors.white};
+  box-shadow: 0px 0px 10px 0px #0000000D;
+  padding: 4px 12px;
+  transition: transform 0.3s ease-out;
+
+  transform: ${props => props.isVisible ? "translateX(100%)" : "translateX(-40%)"};
+
+  li {
+      display: flex;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: ${colors.secundary500}
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
 `
 export const ModalContainer = styled.div`
   width: 100%;

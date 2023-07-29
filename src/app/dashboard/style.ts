@@ -1,22 +1,22 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { colors } from '../../styles/color'
-import { sm, md, lg, xl } from '../../styles/responsiveStyles';
+import { sm, md, lg, xl } from '../../styles/responsiveStyles'
 
 export const LayoutContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `
-export const DashBoardContainer = styled.div`
-  width: 100%;
-  height: 100%;
+// export const DashBoardContainer = styled.div`
+//   width: 100%;
+//   height: 100%;
 
-  padding-top: 50px;
-  padding-bottom: 50px;
-`;
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// `
 
 export const Container = styled.div`
   width: 100%;
@@ -24,34 +24,43 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F7F7F7 100%);
-`
-export const MenuContainer = styled.div`
-  width: 80px;
-  padding: 20px 16px;
-  background: linear-gradient(0deg, #E0DEEA, #E0DEEA),
-  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background: rgba(249, 249, 249, 1);
 
-  ${lg`
-    width: max-content;
-  `}
 `
+// export const MenuContainer = styled.div`
+//   width: 80px;
+//   padding: 20px 16px;
+//   background: linear-gradient(0deg, #E0DEEA, #E0DEEA),
+//   linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+//   /* ${lg`
+//     width: max-content;
+//   `} */
+// `
 export const DashboardContent = styled.div`
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 64rem;
+  max-width: 76rem;
+  padding-left: 32px;
+  padding-right: 32px;
 `
 export const DashboardView = styled.div`
   width: 100%;
   height: 112px;
-  gap: 16px;
-  display: flex;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   margin-bottom: 20px;
 `
+export const DashboardLeft = styled.div`
+  width: 100%;
+  height: 100%;
+`
 export const BalanceContainer = styled.div`
-  width: 592px;
+  width: 100%;
   height: 100%;
   border-radius: 8px;
   background: red;
@@ -99,11 +108,17 @@ export const BalanceRight = styled.div`
     color: ${colors.textbase};
   }
 `
+export const DashboardRight = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+`
 export const ChartContainer = styled.div`
-  width: 280px;
+  width: 100%;
   height: 100%;
-  border-radius: 8px;
+  display: flex;
   background: red;
+  border-radius: 8px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
 `
 export const ChartLeft = styled.div`
@@ -122,8 +137,9 @@ export const ChartRight = styled.div`
 `
 
 export const NetnewsContainer = styled.div`
-  width: 280px;
+  width: 100%;
   height: 100%;
+  display: flex;
   background: red;
   border-radius: 8px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);

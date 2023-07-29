@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 // Defina o objeto responsivo
 const responsive = {
+  xs: '320px',
   sm: '480px',
   md: '768px',
   lg: '1024px',
@@ -10,6 +11,12 @@ const responsive = {
 };
 
 // Crie mixins para os diferentes tamanhos responsivos
+const xs = (content: any) => css`
+  @media screen and (max-width: ${responsive.xs}) {
+    ${content};
+  }
+`;
+
 const sm = (content: any) => css`
   @media screen and (max-width: ${responsive.sm}) {
     ${content};
@@ -40,4 +47,4 @@ const xxl = (content: any) => css`
   }
 `;
 
-export { sm, md, lg, xl, xxl };
+export { xs, sm, md, lg, xl, xxl };

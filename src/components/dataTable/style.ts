@@ -18,35 +18,42 @@ export const DataTableContainer = styled.div`
   }
   
   .crypto{
+    gap: 8px;
     display: flex;
     align-items: center;
-    gap: 8px;
+  }
+
+  .tableheader{
+    display: grid;
+    padding: 0 16px;
+    grid-template-columns: 1fr 3fr 3fr 3fr 0.5fr;
   }
 
   table {
     width: 100%;
     border-spacing: 0;
 
-    
     tr {
-      display: flex;
-      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 3fr 3fr 3fr 0.5fr;
       align-items: center;
-      justify-content: space-between;
       height: 64px;
-      background: rgba(255, 255, 255, 1);
-    }
+      
+      padding: 0 16px;
 
-    .trcontent{
-      display: flex;
-      justify-content: space-between;
-      text-align: left;
-      align-items: center;
-      height: 64px;
-      background: rgba(246, 246, 246, 1);
+      &:nth-child(odd) {
+        background: ${colors.white};
+        /* Outros estilos para as linhas ímpares */
+      }
+
+      &:nth-child(even) {
+        background: ${colors.secundary100};
+        /* Outros estilos para as linhas pares */
+      }
     }
 
     th {
+      width: 120px;
       text-align: left;
       font-weight: 400;
       font-size: 14px;
@@ -55,6 +62,7 @@ export const DataTableContainer = styled.div`
     }
 
     td {
+      text-align: left;
       font-weight: 400;
       font-size: 16px;
       line-height: 16px;
@@ -66,29 +74,33 @@ export const DataTableContainer = styled.div`
       }
     }
 
-    button{
-      width: 80px;
-      border: none;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16px;
-      padding: 8px 16px;
-      border-radius: 32px;
-      color:${colors.white};          
-      background:${colors.tertiary700};
+    .trade{
+      button{
+        width: 80px;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 8px 16px;
+        border-radius: 32px;
+        color:${colors.white};          
+        background:${colors.tertiary700};
+      }
     }
+    
   }
 `
 export const ActionView = styled.div`
   display: flex;
+  margin-top: 16px;
   align-items: center;
   justify-content: center;
-
+  
   button{
-    display: flex;
-    align-items: center;
     gap: 8px;
+    display: flex;
     border: none;
+    align-items: center;
     color: ${colors.primary500};
     background: none;
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import Tooltip from "../Tooltip"
 import { menu } from "../../data";
 
 import {
@@ -12,15 +13,21 @@ import {
 
 const Menu = () => {
   return (
-    <MenuContainer className="menu">
+    <MenuContainer>
       {menu?.map((item) => (
-        <MenuContents className="item" key={item.id}>
-          <span className="title">{item.title}</span>
+        <MenuContents key={item.id}>
+          <span>{item.title}</span>
           {item.listItems.map((listItem) => (
-            <Link href={listItem.url} className="listItem" key={listItem.id}>
-              <Image src={listItem.icon} alt="" />
-              {/* <span className="listItemTitle">{listItem.title}</span> */}
-            </Link>
+            <Tooltip 
+              title="Transfer Crypto" 
+              placement="right-start" 
+              key={listItem.id}
+            >
+              <Link href={listItem.url}>
+                <Image src={listItem.icon} alt="" width={32} height={32}/>
+                {/* <span className="listItemTitle">{listItem.title}</span> */}
+              </Link>
+            </Tooltip>
           ))}
         </MenuContents>
       ))}

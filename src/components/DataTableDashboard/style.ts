@@ -81,6 +81,27 @@ export const DataTableContainer = styled.div`
     }
   }
 `
+export const ActionView = styled.div`
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+  
+  button{
+    gap: 8px;
+    display: flex;
+    border: none;
+    align-items: center;
+    color: ${colors.primary500};
+    background: none;
+
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+`
 export const DataTableHeader = styled.div`
   display: flex;
   align-items: center;
@@ -114,5 +135,71 @@ export const HeaderLeft = styled.div`
     font-weight: 700;
     line-height: 32px;
     color: ${colors.textbase};
+  }
+`
+export const ModalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: ${colors.textbase};
+  }
+
+  form {
+    width: 100%;
+    padding: 20px 0;
+    
+    Select{
+      width: 100%;
+      padding: 16px;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      color: ${colors.textbase};
+      border-radius: 8px;
+      border: 1px solid ${colors.secundary300};
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      line-height: 24px;
+      font-size: 16px;
+      color: ${colors.textbase};
+      border-radius: 8px;
+      border: 1px solid ${colors.secundary300};
+    }
+  }
+`
+export const FormContent = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`
+export const ModalAction = styled.div`
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  >button{
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 14px 24px;
+    border-radius: 32px;
+    margin-bottom: 20px;
+    color:${colors.white};
+    background:${colors.primary500};
   }
 `

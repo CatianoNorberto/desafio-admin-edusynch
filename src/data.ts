@@ -70,3 +70,36 @@ export const cardBisnessComputer = [
     about:'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, ',
   },
 ]
+
+export const datatable = [
+  {
+    id: '1',
+    crypto: 'Bitcoin BTC',
+    price: 'US$ 25.499,52',
+    change: '+5,65%',
+  },
+  {
+    id: '2',
+    crypto: 'Bitcoin BTC',
+    price: 'US$ 25.499,52',
+    change: '+5,65%',
+  },
+  {
+    id: '3',
+    crypto: 'Bitcoin BTC',
+    price: 'US$ 25.499,52',
+    change: '+5,65%',
+  },
+  {
+    id: '4',
+    crypto: 'Bitcoin BTC',
+    price: 'US$ 25.499,52',
+    change: '+5,65%',
+  },
+  {
+    id: '5',
+    crypto: 'Bitcoin BTC',
+    price: 'US$ 25.499,52',
+    change: '+5,65%',
+  }
+]
